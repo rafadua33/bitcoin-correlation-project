@@ -8,7 +8,13 @@ class MarketEvent:
         return f"MarketEvent(name={self.name}, date={self.date}, ohlcv_impact={self.ohlcv_impact})"
     
 class SignalEvent:
-
+    pass
 
 class OrderEvent:
-
+    def __init__(self, symbol, quantity, order_type):
+        self.symbol = symbol
+        self.quantity = quantity
+        self.order_type = order_type
+    
+    def __repr__(self):
+        return f"OrderEvent(symbol={self.symbol}, quantity={self.quantity}, order_type={self.order_type})"
